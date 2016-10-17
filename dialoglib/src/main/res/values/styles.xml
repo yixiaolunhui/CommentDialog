@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="BaseDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+    <style name="BottomDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
         <item name="android:windowTitleStyle">@null</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:windowAnimationStyle">@style/BaseDialog.AnimationStyle</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialog.AnimationStyle</item>
         <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
     </style>
-    <style name="BaseDialog.AnimationStyle" parent="android:Animation">
+    <style name="BottomDialog.AnimationStyle" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
         <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+    <style name="UpDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/UpDialog.AnimationStyle</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="UpDialog.AnimationStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_up</item>
     </style>
 </resources>

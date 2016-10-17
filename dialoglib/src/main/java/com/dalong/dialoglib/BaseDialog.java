@@ -28,7 +28,7 @@ public abstract class BaseDialog extends DialogFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setStyle(DialogFragment.STYLE_NO_TITLE, R.style.BaseDialog);
+        setStyle(DialogFragment.STYLE_NO_TITLE,getStyleRes());
     }
 
     @Nullable
@@ -55,6 +55,11 @@ public abstract class BaseDialog extends DialogFragment {
      */
     public abstract void bindView(View v);
 
+    /**
+     * 获取主题
+     * @return
+     */
+    public abstract int getStyleRes();
 
     @Override
     public void onStart() {

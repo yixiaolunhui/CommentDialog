@@ -67,12 +67,19 @@ public abstract class BaseDialog extends DialogFragment {
         Window window = getDialog().getWindow();
         WindowManager.LayoutParams params = window.getAttributes();
         params.dimAmount = getDimAmount();
-        params.width = WindowManager.LayoutParams.MATCH_PARENT;
-        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        params.width = getWidth();
+        params.height = getHeight();
         params.gravity = getGravity();
         window.setAttributes(params);
     }
 
+    public int getHeight(){
+        return WindowManager.LayoutParams.WRAP_CONTENT;
+    }
+
+    public int getWidth(){
+        return WindowManager.LayoutParams.MATCH_PARENT;
+    }
     /**
      * 获取点击其他区域是否关闭
      * @return

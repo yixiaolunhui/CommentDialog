@@ -20,5 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="从下往上" />
+    <Button
+        android:onClick="right"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="从右往左" />
 
 </LinearLayout>

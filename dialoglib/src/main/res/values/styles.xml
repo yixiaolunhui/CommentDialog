@@ -23,4 +23,15 @@
         <item name="android:windowEnterAnimation">@anim/slide_in_from_up</item>
         <item name="android:windowExitAnimation">@anim/slide_out_to_up</item>
     </style>
+    <style name="RightDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/RightDialog.AnimationStyle</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="RightDialog.AnimationStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_right</item>
+    </style>
 </resources>

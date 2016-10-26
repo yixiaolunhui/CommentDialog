@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dalong.dialoglib.BottomDialog;
+import com.dalong.dialoglib.RightDialog;
 import com.dalong.dialoglib.UpDialog;
 
 
@@ -43,6 +44,23 @@ public class MainActivity extends AppCompatActivity {
      */
     public void upClick(View view) {
         showUpDialog();
+    }
+    /**
+     * 从右往左dialog
+     *
+     * @param view
+     */
+    public void right(View view) {
+        showRightDialog();
+    }
+
+    private void showRightDialog() {
+        RightDialog.create(getSupportFragmentManager())
+                .setLayoutRes(R.layout.dialog_right_view)//设置显示布局
+                .setDimAmount(0.6f) //设置背景透明度
+                .setCancelOutside(true) // 设置是否可以点击其他区域关闭dialog
+                .setTag("comment")
+                .show();
     }
 
     /**
